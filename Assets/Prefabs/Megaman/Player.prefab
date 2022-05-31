@@ -206,6 +206,7 @@ MonoBehaviour:
   bullet2: {fileID: 8725457225342552054, guid: 53f9481d8dce4b94c8f59cf6c7403d26, type: 3}
   shotA: {fileID: 8300000, guid: 2a1430b4ca3ed3743b94bf88c987e188, type: 3}
   killed: {fileID: 8300000, guid: 4a038210ae2db3643a4e16549083f03d, type: 3}
+  jumpS: {fileID: 0}
 --- !u!95 &1406892612484604229
 Animator:
   serializedVersion: 4
@@ -237,7 +238,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2a1430b4ca3ed3743b94bf88c987e188, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

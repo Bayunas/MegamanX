@@ -1,0 +1,27 @@
+.button1 {
+    height: 100px;
+    width: 80%;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: rgb(29, 29, 57);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.button1:hover {
+    height: 100px;
+    width: 80%;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color: rgb(148, 0, 2);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

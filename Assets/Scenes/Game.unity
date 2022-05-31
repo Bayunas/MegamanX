@@ -223,6 +223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422575208580269993, guid: f636cdfd1502dc344bc3bfdec3a3e7dd, type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b12983306694a4c9dac42c9831b184, type: 3}
     - target: {fileID: 5432883972788620818, guid: f636cdfd1502dc344bc3bfdec3a3e7dd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -285,6 +289,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -351,7 +356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0.02592751, y: -0.052031204, z: -0.0013513261, w: 0.99830794}
-  m_LocalPosition: {x: -24.657866, y: -7.3974757, z: -8.98458}
+  m_LocalPosition: {x: -27.686102, y: -7.4142213, z: -9.300224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -392,6 +397,102 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!82 &519420034
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ad0f3b1e60cf10346b26fcb44dd3c570, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.132
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &526574689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1299,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1406892612484604228, guid: f89b4553eb4441346ac845994998c44a, type: 3}
+      propertyPath: jumpS
+      value: 
+      objectReference: {fileID: 8300000, guid: 63dd0f66ec59e4041a9718d638962f5d, type: 3}
+    - target: {fileID: 1406892612484604228, guid: f89b4553eb4441346ac845994998c44a, type: 3}
+      propertyPath: numberenemies
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2794743059270456510, guid: f89b4553eb4441346ac845994998c44a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1255,6 +1364,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422575208580269993, guid: f636cdfd1502dc344bc3bfdec3a3e7dd, type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: 62b12983306694a4c9dac42c9831b184, type: 3}
     - target: {fileID: 5432883972788620818, guid: f636cdfd1502dc344bc3bfdec3a3e7dd, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1421,7 +1534,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2879915, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -16747,7 +16860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: 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
+    dataString: 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
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 

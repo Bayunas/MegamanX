@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/style1.uss?fileID=7433441132597879392&amp;guid=1a2d2f7351469d6439905f7d981263f7&amp;type=3#style1" />
+    <ui:VisualElement style="height: 1076px; width: 1938px; background-color: rgba(5, 5, 5, 0.6); align-items: center; justify-content: center; background-image: url(&apos;project://database/Assets/assets_platformer/megamanback.jpg?fileID=2800000&amp;guid=47773a7c3ca043442970ea76f6017952&amp;type=3#megamanback&apos;);">
+        <ui:VisualElement style="-unity-background-image-tint-color: rgb(255, 255, 255); height: 618px; background-color: rgba(255, 255, 255, 0.6); width: 690px; border-top-left-radius: 50px; border-bottom-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; align-items: center; justify-content: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <ui:Button text="Start Game " display-tooltip-when-elided="true" name="start-btn" class="button1" style="color: rgb(255, 255, 255); font-size: 40px;" />
+            <ui:Button text="Developers" display-tooltip-when-elided="true" name="msg-btn" class="button1" style="font-size: 40px; color: rgb(255, 255, 255);" />
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="msg-txt" style="font-size: 36px; -unity-font-style: bold; color: rgb(0, 0, 0); position: absolute; top: 15px; display: none;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

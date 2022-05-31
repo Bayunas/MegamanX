@@ -7,14 +7,18 @@ public class flyingenemy : MonoBehaviour
 {
     [SerializeField] float health;
     [SerializeField] GameObject player;
+    [SerializeField] AudioClip death;
+
     AIPath myPath;
     private Animator anim;
+    private new AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
         myPath = GetComponent<AIPath>();
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,12 +67,18 @@ public class flyingenemy : MonoBehaviour
         }
         if(health == 0)
         {
-           
+            DeathSound();
             StartCoroutine("dead");
            
         }
         
     }
+
+    public void DeathSound()
+    {
+        audio.PlayOneShot(death);
+    }
+
     IEnumerator dead()
     {
         gameObject.layer = 9;

@@ -12,18 +12,27 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject bullet2;
     [SerializeField] AudioClip shotA;
     [SerializeField] AudioClip killed;
+    [SerializeField] AudioClip jumpS;
+    private GUIStyle guiStyle = new GUIStyle();
+
+
     Rigidbody2D myBody;
     private bool die;
     private float disparar = 0f;
     private new AudioSource audio;
     Animator myAnim;
-    bool isGrounded = true; 
+    int numberenemies = 6;
+    bool isGrounded = true;
+    bool killedAllEnemies = false;
     // Start is called before the first frame update
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+
+        numberenemies = 6;
+        guiStyle.normal.textColor = Color.white;
         //StartCoroutine(miCorutina());
     }
     IEnumerator miCorutina()
@@ -45,8 +54,45 @@ public class Player : MonoBehaviour
         Jump();
         Fire();
         FinishingRun();
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        numberenemies = enemies.Length;
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            numberenemies--;
+        }
+        if (numberenemies == 0)
+        {
+            endGame();
+        }
+
     }
-    void Fire()
+
+    void endGame()
+    {
+        killedAllEnemies = true;
+        StartCoroutine("EndGame");
+    }
+    void OnGUI()
+    {
+
+
+        if (killedAllEnemies)
+        {
+            
+            guiStyle.fontSize = 50;
+            //guiStyle.font.material.color = Color.white;
+            GUILayout.Label("All enemies Killed", guiStyle);
+        }
+        else
+        {
+            guiStyle.fontSize = 50;
+            GUILayout.Label("Enemies Remaining : " + numberenemies, guiStyle);
+        }
+    }
+
+
+        void Fire()
     {
         if (Input.GetKeyDown(KeyCode.Z) && Time.time > disparar)
         {
@@ -84,11 +130,12 @@ public class Player : MonoBehaviour
     {
         if (isGrounded)
         {
-          
+           
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Debug.Log("Saltando!");
                 myBody.AddForce(new Vector2(0, jumpforce),ForceMode2D.Impulse);
+                JumpSound();
                
             }
         }
@@ -156,6 +203,11 @@ public class Player : MonoBehaviour
         audio.Play();
     }
 
+    public void JumpSound()
+    {
+        audio.PlayOneShot(jumpS);
+    }
+
     public void DeathA()
     {
         audio.PlayOneShot(killed);
@@ -176,7 +228,18 @@ public class Player : MonoBehaviour
 
     }
 
-   
+    IEnumerator EndGame()
+    {
+        myAnim.SetBool("Death", false);
+        yield return new WaitForSeconds(0.1f);
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(1);
+        SceneManager.LoadScene("EndGame");
+        Time.timeScale = 1;
+
+    }
+
+
 
 
 }

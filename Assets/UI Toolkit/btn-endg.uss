@@ -1,0 +1,31 @@
+.btn-end {
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 309px;
+    left: 342px;
+    height: 132px;
+    width: 387px;
+    font-size: 50px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgba(115, 98, 140, 255);
+}
+
+.btn-end:hover {
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 309px;
+    left: 342px;
+    height: 132px;
+    width: 387px;
+    font-size: 50px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(228, 106, 88);
+}

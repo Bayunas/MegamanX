@@ -8,10 +8,13 @@ public class Turret : MonoBehaviour
     [SerializeField] float delta;
     [SerializeField] GameObject Turretbul;
     [SerializeField] float health;
+    [SerializeField] AudioClip death;
+   
 
     private Animator anim;
     private bool Shoot;
     float tmp = 0f;
+    private new AudioSource audio;
 
 
 
@@ -19,6 +22,7 @@ public class Turret : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -65,11 +69,15 @@ public class Turret : MonoBehaviour
         }
         if (health == 0)
         {
-
+            DeathSound();
             StartCoroutine("dead");
 
         }
 
+    }
+    public void DeathSound()
+    {
+        audio.PlayOneShot(death);
     }
 
     IEnumerator dead()
@@ -80,4 +88,6 @@ public class Turret : MonoBehaviour
         Destroy(this.gameObject);
 
     }
+
+   
 }
